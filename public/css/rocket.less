@@ -1,0 +1,71 @@
+#outerspace {
+  position: relative;
+  height: 400px;
+  background: #0c0440 url(/images/outerspace.jpg);
+  color: #fff;
+  overflow: hidden;
+}
+div.rocket {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  -webkit-transition: 3s ease-in;
+  -moz-transition: 3s ease-in;
+  -o-transition: 3s ease-in;
+  transition: 3s ease-in;
+}
+div.rocket div {
+  width: 92px;
+  height: 215px;
+  background: url(/images/rocket.gif) no-repeat;
+  -webkit-transition: 2s ease-in-out;
+  -moz-transition: 2s ease-in-out;
+  -o-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+}
+
+/* hover final state */
+#outerspace:hover div.rocket {
+  -webkit-transform: translate(1400%,-200px);
+  -moz-transform: translate(1400%,-200px);
+  -o-transform: translate(1400%,-200px);
+  -ms-transform: translate(1400%,-200px);
+  transform: translate(1400%,-100px);
+}
+#outerspace:hover div.rocket div {
+  -webkit-transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
+  -o-transform: rotate(70deg);
+  -ms-transform: rotate(70deg);
+  transform: rotate(70deg);
+}
+
+//box
+.stage {
+  position: relative;
+  height: 4em;
+  background: #efefef;
+  text-align: center;
+}
+.box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  background: red;
+  line-height: 2em;
+  color: #fff;
+  -webkit-transition: 1s bottom, 4s 1s margin-left, 4s 1s left cubic-bezier(0,1,1,1);
+  -moz-transition: 1s bottom, 4s 1s margin-left, 4s 1s left cubic-bezier(0,1,1,1);
+  -o-transition: 1s bottom, 4s 1s margin-left, 4s 1s left cubic-bezier(0,1,1,1);
+  transition: 1s bottom, 4s 1s margin-left, 4s 1s left cubic-bezier(0,1,1,1);
+}
+.stage:hover .box {
+  left: calc(~"100% - 100px");
+  bottom: 2em;
+}
+
+.stage.ie-box:hover .box {
+  left: 100%;
+  margin-left: -100px;
+}

@@ -1,0 +1,49 @@
+.selector {
+  margin: 10px 0;
+  .selector-demo {
+    margin-top: 5px;
+    input:checked + label {
+      border: 1px solid black;
+    }
+    div:not(#container) {
+      color: blue;
+    }
+    .demo1 {
+      li:nth-child(3) {
+        color: red;
+      }
+    }
+    .demo2 {
+      li:nth-last-child(2) {
+        color: red;
+      }
+    }
+    .demo3 {
+      ul:nth-of-type(3) {
+        border: 1px solid black;
+      }
+    }
+    .demo4 {
+      ul:nth-last-of-type(3) {
+        border: 1px solid black;
+      }
+    }
+    .demo5 {
+      &> li:last-child {
+        color: red;
+      }
+    }
+    .demo6 {
+      div p:only-of-type {
+        color: red;
+      }
+
+      li:only-of-type {
+        font-weight: bold;
+      }
+    }
+    div > p:only-child {
+      color: red;
+    }
+  }
+}

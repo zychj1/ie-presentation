@@ -1,0 +1,42 @@
+<% include partials/body-top.ejs %>
+<div class="ie-hacks">
+  <div class="ie-1">
+    ie10 only <br/>
+    @media screen and (min-width:0\0)
+  </div>
+  <div class="ie-2">
+    ie10 only<br/>
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  </div>
+  <div class="ie-3">
+    ie7/8/9/10<br/>
+    color: red\9;
+  </div>
+  <div class="row">
+    <div class="col-md-6 ie-4">
+      opacity with filter<br/>
+      DX Filters don't work in ie10 :)
+    </div>
+    <div class="col-md-6 opacity">
+      opacity without filter<br/>
+      DX Filters don't work in ie10
+    </div>
+  </div>
+</div>
+
+<div class="fixed-bugs">
+  <div class="ie-hacks">
+    <img class="ie-4" src="http://fc09.deviantart.net/fs71/i/2013/134/3/c/tree_2__png_with_transparency__by_bupaje-d65amxg.png"/>
+  </div>
+  <div class="arrow_box" ng-click="activeArrow = !activeArrow" ng-class="{'active-arrow': activeArrow}">rendering pseudoelements</div>
+</div>
+
+<div class="starter-template" ng-controller="SimpleCtrl">
+  <div>
+    <button ng-click="load()">load data</button>
+    <button ng-click="pre.push({})">add pre</button>
+  </div>
+
+  <pre ng-dblclick="remove(p)" ng-repeat="p in pre">{{data | json}}</pre>
+</div>
+<% include partials/body-bottom.ejs %>

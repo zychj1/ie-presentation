@@ -1,0 +1,196 @@
+<% include partials/body-top.ejs %>
+<div class="selector">
+  <pre>
+    input:checked + label {
+      border: 1px solid black;
+    }
+  </pre>
+  <div class="selector-demo">
+    <input type="radio" id="rad" name="rad"/>
+    <label for="rad"> Radio Button</label>
+    <input type="radio" id="rad2" name="rad"/>
+    <label for="rad2"> Radio Button</label>
+    <input type="checkbox" id="check" name="rad"/>
+    <label for="check"> checkbox</label>
+  </div>
+</div>
+
+<div class="selector">
+  <pre>
+    div:not(#container) {
+      color: blue;
+    }
+  </pre>
+  <div class="selector-demo">
+    <div>not container</div>
+    <div id="container">#container</div>
+  </div>
+</div>
+
+<div class="selector">
+  <pre>
+    li:nth-child(3) {
+      color: red;
+    }
+  </pre>
+  <div class="selector-demo">
+    <ul class="demo1">
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="selector">
+  <pre>
+    li:nth-last-child(2) {
+      color: red;
+    }
+  </pre>
+  <div class="selector-demo">
+    <ul class="demo2">
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="selector">
+  <pre>
+    ul:nth-of-type(3) {
+      border: 1px solid black;
+    }
+  </pre>
+  <div class="selector-demo">
+    <div class="demo3">
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="selector">
+  <pre>
+    ul:nth-last-of-type(3) {
+      border: 1px solid black;
+    }
+  </pre>
+  <div class="selector-demo">
+    <div class="demo4">
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
+      <ul>
+        <li>Lorem ipsum.</li>
+        <li>Lorem ipsum.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="selector">
+  <pre>
+    ul > li:last-child {
+      color: red;
+    }
+  </pre>
+  <div class="selector-demo">
+    <ul class="demo5">
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="selector">
+  <pre>
+    div p:only-child {
+      color: red;
+    }
+    &lt;div&gt;
+      &lt;p&gt;Lorem ipsum dolor.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;Lorem ipsum dolor.&lt;/p&gt;
+      &lt;p&gt;Lorem ipsum dolor.&lt;/p&gt;
+    &lt;/div&gt;
+  </pre>
+  <div class="selector-demo">
+    <div>
+      <p>Lorem ipsum dolor.</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor.</p>
+      <p>Lorem ipsum dolor.</p>
+    </div>
+  </div>
+</div>
+
+<div class="selector">
+  <pre>
+    div p:only-of-type {
+      color: red;
+    }
+
+    li:only-of-type {
+      font-weight: bold;
+    }
+  </pre>
+  <div class="selector-demo">
+    <div class="demo6">
+      <div>
+        <p> My paragraph here. </p>
+        <ul>
+          <li> List Item </li>
+          <li> List Item </li>
+        </ul>
+      </div>
+
+      <div>
+        <p> Two paragraphs total. </p>
+        <p> Two paragraphs total. </p>
+        <ul>
+          <li> List Item </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/body-bottom.ejs %>
